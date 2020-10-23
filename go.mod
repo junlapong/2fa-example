@@ -1,6 +1,6 @@
-module github.com/mattn/2fa-example
+module github.com/junlapong/2fa-example
 
-go 1.16
+go 1.15
 
 require (
 	github.com/dgryski/dgoogauth v0.0.0-20190221195224-5a805980a5f3
