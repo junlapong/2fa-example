@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>ログイン</title>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var params = [...new URLSearchParams(location.search).entries()].reduce((obj, e) => ({...obj, [e[0]]: e[1]}), {});
   if (params.result == 'bad') {
-    document.querySelector('#status').textContent = 'Wrong code';
+    document.querySelector('#status').textContent = 'ログイン失敗';
   }
 })
 </script>
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
     <div><span id="status"></span></div>
     <form method="post" action="/auth">
-        <input name="code" type="number" maxlength="6" autocomplete="off">
-        <input type="submit" value="Submit">
+        <input name="code" type="text" name="">
+        <input type="submit" value="認証">
     </form>
 
     <div>

@@ -25,7 +25,7 @@ func main() {
 	e := echo.New()
 	e.GET("/qrcode", func(c echo.Context) error {
 		uri, _ := url.Parse("otpauth://totp")
-		desc := "すごいサービス"
+		desc := "Secure Service"
 		account := "user@example.com"
 		uri.Path += "/" + url.PathEscape(account)
 		params := url.Values{}
@@ -47,7 +47,7 @@ func main() {
 		return c.Redirect(http.StatusFound, "/ok")
 	})
 	e.GET("/ok", func(c echo.Context) error {
-		return c.String(http.StatusOK, "すごい")
+		return c.String(http.StatusOK, "Pass")
 	})
 	e.Static("/", "assets")
 	e.Logger.Fatal(e.Start(":8989"))

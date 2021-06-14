@@ -7,4 +7,5 @@ from https://github.com/mattn/2fa-example
 
 ## Others
 
+- [Authy](https://play.google.com/store/apps/details?id=com.authy.authy) - Android
 - [Authenticator](https://github.com/mattrubin/Authenticator) - Two-Factor Authentication Client for iOS
